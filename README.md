@@ -6,7 +6,7 @@ Servidor 1 → IP: 192.168.1.201 → Banco PostgreSQL \
 Servidor 2 → IP: 192.168.1.202 → Zabbix Server + Frontend \
 Servidor 3 → IP: 192.168.1.203 → Zabbix Proxy Local \
 Servidor 4 → IP: 192.168.1.204 → Grafana \
-Servidor 5 → IP: 192.168.1.206 → Zabbix Proxy Externo\ 
+Servidor 5 → IP: 192.168.1.206 → Zabbix Proxy Externo 
 
 ### Abaixo segue o guia de instalação e configuração distribuída
 
