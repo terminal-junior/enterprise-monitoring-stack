@@ -488,7 +488,8 @@ Senha: admin (será solicitado para alterar no primeiro login)
 ## 5. Preparar o Servidor do Zabbix Proxy Externo (Servidor 5 – Proxy Externo)
 
 
-Repita o passo 3 e no final instale o [ZeroTier](https://www.zerotier.com/) para usar sua VPN privada.
+Repita o **passo 3** e no final instale o [ZeroTier](https://www.zerotier.com/) para usar sua VPN privada. \
+Com isso poderá monitorar hosts e dispositivos remotos.
 
 ```bash
 curl -s https://install.zerotier.com | sudo bash
