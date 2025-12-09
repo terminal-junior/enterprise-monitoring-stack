@@ -1,41 +1,38 @@
 # 📘 Coleção de Scripts de Instalação e Configuração
 
-Este repositório reúne scripts automatizados desenvolvidos para facilitar a instalação, configuração e manutenção de serviços essenciais em ambientes Linux, com foco em servidores baseados em Rocky Linux, RHEL e CentOS.
-
+Este repositório reúne scripts automatizados desenvolvidos para facilitar a instalação, configuração e manutenção de serviços essenciais em ambientes Linux, com foco em servidores baseados em Rocky Linux, RHEL e CentOS. \
 Todos os scripts seguem boas práticas de organização, padronização e segurança, reduzindo tempo de configuração e evitando erros manuais.
 
 ## 📂 Scripts incluídos 
 
-### 🚀 1. install_grafana.sh
+### 🚀 1. install_scripts.sh
 
-Script completo para instalar, configurar e liberar o acesso ao Grafana Enterprise 12.3.0.
+Script completo para instalar, configurar e inicializar todo o projeto.
 
 Principais funções:
 
-Atualização automática do sistema
-
-Instalação de dependências essenciais
-
-Ativação de serviços como sshd e firewalld
-
-Instalação do pacote RPM oficial do Grafana
-
-Configuração do firewall com regras de segurança
-
-Inicialização e habilitação do serviço grafana-server
+Atualização automática do sistema \
+Instalação de dependências essenciais \
+Ativação de serviços como sshd e firewalld \
+Instalação do pacote RPM oficial do Grafana \
+Configuração do firewall com regras de segurança \
+Inicialização e habilitação do serviço grafana-server \
+Inicialização e habilitação do zabbix proxy
 
 Execução:
 
 ```bash
 sudo bash grafana.sh
 ```
+```bash
+sudo bash zabbix-proxy-local.sh
+```
+
 
 ### 📌 1.1 Requisitos gerais
 
-Distribuição Linux compatível com dnf ou yum
-
-Permissões administrativas (sudo/root)
-
+Distribuição Linux compatível com dnf ou yum \
+Permissões administrativas (sudo/root) \
 Conexão com a internet para baixar pacotes
 
 
@@ -46,11 +43,17 @@ Dê permissão de execução ao script desejado:
 ```bash
 sudo chmod +x grafana.sh
 ```
+```bash
+sudo chmod +x zabbix-proxy-local.sh
+```
 
 Execute como root ou com sudo:
 
 ```bash
 sudo ./grafana.sh
+```
+```bash
+sudo ./zabbix-proxy-local.sh
 ```
 
 ### ⭐ Objetivo do projeto
