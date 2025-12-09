@@ -4,6 +4,8 @@ echo "======================================="
 echo "  Instalação e Configuração do Grafana"
 echo "======================================="
 
+hostnamectl set-hostname Grafana
+
 # 1. Atualizando o sistema
 echo "[1/8] Atualizando o sistema..."
 dnf update -y
