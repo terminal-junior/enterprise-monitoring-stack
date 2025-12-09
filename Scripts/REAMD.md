@@ -17,7 +17,8 @@ Ativação de serviços como sshd e firewalld \
 Instalação do pacote RPM oficial do Grafana \
 Configuração do firewall com regras de segurança \
 Inicialização e habilitação do serviço grafana-server \
-Inicialização e habilitação do zabbix proxy
+Inicialização e habilitação do zabbix proxy \
+Inicialização e habilitação do zabbix proxy externo para uso de VPN via [ZeroTier](https://www.zerotier.com/)
 
 Execução:
 
@@ -27,7 +28,9 @@ sudo bash grafana.sh
 ```bash
 sudo bash zabbix-proxy-local.sh
 ```
-
+```bash
+sudo bash zabbix-proxy-externo.sh
+```
 
 ### 📌 1.1 Requisitos gerais
 
@@ -46,6 +49,9 @@ sudo chmod +x grafana.sh
 ```bash
 sudo chmod +x zabbix-proxy-local.sh
 ```
+```bash
+sudo chmod +x zabbix-proxy-externo.sh
+```
 
 Execute como root ou com sudo:
 
@@ -54,6 +60,9 @@ sudo ./grafana.sh
 ```
 ```bash
 sudo ./zabbix-proxy-local.sh
+```
+```bash
+sudo ./zabbix-proxy-externo.sh
 ```
 
 ### ⭐ Objetivo do projeto
