@@ -219,8 +219,87 @@ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address
 
 
 
+---
+
+## 4. Preparar o Servidor Grafana (Servidor 4 - Grafana)
+
+### 🛠️ 1. Atualizando o sistema
+
+```bash
+sudo dnf update -y
+```
+
+### 🧩 2. Instalando pacotes básicos
+```bash
+sudo dnf install -y nano openssh-server firewalld
+```
+
+### 🔧 3. Habilitando e iniciando serviços essenciais
+```bash
+sudo systemctl enable sshd firewalld
+sudo systemctl start sshd firewalld
+```
+
+### 📦 4. Instalando o Grafana Enterprise 12.3.0
+
+Baixe e instale o pacote .rpm:
+
+```bash
+sudo yum install -y https://dl.grafana.com/grafana-enterprise/release/12.3.0/grafana-enterprise_12.3.0_19497075765_linux_amd64.rpm
+```
+
+Atualize os serviços:
+
+```bash
+sudo systemctl daemon-reload
+```
+
+Inicie e habilite o serviço do Grafana:
+
+```bash
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+```
+
+### 🔥 5. Configurando Firewall (firewalld)
+
+Libere o acesso à porta 3000 (Grafana) apenas para a rede interna:
+
+```bash
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" port port="3000" protocol="tcp" accept'
+```
+
+Libere acesso SSH para a rede:
+
+```bash
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" service name="ssh" accept'
+```
+
+Recarregue o firewall:
+
+```bash
+sudo firewall-cmd --reload
+```
+
+### 🚀 6. Acessando o Grafana
+
+Abra o navegador e acesse:
+
+```bash
+http://192.168.1.204:3000
+```
+
+Credenciais padrão:
+
+Usuário: admin
+
+Senha: admin (será solicitado para alterar no primeiro login)
 
 
+
+---
+
+## 5. Preparar o Servidor do Zabbix Proxy Externo (Servidor 5 – Proxy Externo)
 
 
 
