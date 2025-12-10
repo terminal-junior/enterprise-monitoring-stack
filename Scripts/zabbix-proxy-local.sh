@@ -11,7 +11,7 @@ echo "=== Atualizando o sistema e instalando pacotes básicos ==="
 dnf update -y &>/dev/null
 dnf install -y nano openssh-server firewalld &>/dev/null
 
-echo "Inicializando serviços SSH e Firewall"
+echo "=== Inicializando serviços SSH e Firewall ==="
 systemctl enable sshd firewalld &>/dev/null
 systemctl start sshd firewalld &>/dev/null
 
